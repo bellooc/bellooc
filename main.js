@@ -71,11 +71,15 @@ function play(){
     }else {
         resultArea.textContent = "맞춤"
         playbutton.disabled = true;
+
     }
 
     if(chance<1){
-        gameOver=true
-        restchance.textContent = "실패"
+        if(userValue=computerNum){
+            resultArea.textContent = "맞춤"
+        }else{gameOver=true
+            restchance.textContent = "실패"}
+        
     }
     if(gameOver==true){
         playbutton.disabled = true;
