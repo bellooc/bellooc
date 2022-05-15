@@ -78,7 +78,7 @@ function play(){
         if(userValue=computerNum){
             resultArea.textContent = "맞춤"
         }else{gameOver=true
-            restchance.textContent = "실패"}
+            restchance.textContent = `실패 정답은 ${computerNum}이었습니다.`}
         
     }
     if(gameOver==true){
