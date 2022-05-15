@@ -22,7 +22,7 @@ let history =[]
 
 resetbutton.addEventListener("click",reset);
 playbutton.addEventListener("click", play);
-userInput.addEventListener("focus",function(){userInput.value=""})
+userInput.addEventListener("focus",function(){userInput.value=""});
 
 function RandomNum(){
     computerNum = Math.floor(Math.random()*100)+1;
@@ -92,5 +92,8 @@ function reset(){
 
     chance= 5;
     restchance.textContent = "남은 찬스 :"
+    playbutton.disabled = false;
+    history.length=0;
+    gameOver=false;
 }
 RandomNum()
